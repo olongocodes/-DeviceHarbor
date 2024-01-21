@@ -54,5 +54,5 @@ api.add_resource(ProductOrderResource, '/productorders/<int:order_id>')
 api.add_resource(AdminProductOrdersResource, '/productorders', '/productorders/<int:order_id>')
 api.add_resource(UserOrdersResource, '/userorders', '/userorders/<int:order_id>')
 
-if __name__ == '_main_':
+if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
