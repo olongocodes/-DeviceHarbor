@@ -22,7 +22,7 @@ from resources import (
     UserResource
 )
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///projectexample.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///deviceharbor.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = 'your_jwt_secret_key'
 app.config['JWT_TOKEN_LOCATION'] = ['headers', 'cookies'] 
