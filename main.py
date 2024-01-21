@@ -21,7 +21,7 @@ from resources import (
     RefreshTokenResource,
     UserResource
 )
-app = Flask(_name_)
+app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///projectexample.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = 'your_jwt_secret_key'
@@ -54,5 +54,5 @@ api.add_resource(ProductOrderResource, '/productorders/<int:order_id>')
 api.add_resource(AdminProductOrdersResource, '/productorders', '/productorders/<int:order_id>')
 api.add_resource(UserOrdersResource, '/userorders', '/userorders/<int:order_id>')
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     app.run(debug=True, use_reloader=True)
