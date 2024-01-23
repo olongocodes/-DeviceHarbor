@@ -50,7 +50,7 @@ class ProductResource(Resource):
     parser.add_argument('category', type=int,required=True, help='Category cannot be blank')
     parser.add_argument('image_url', type=int,required=True, help='Image cannot be blank')
     parser.add_argument('price', type=float, required=True, help='Price cannot be blank')
-    @jwt_required()
+    @jwt_required(True)
     def get(self, product_id=None):
         if product_id is None:
             products = Product.query.all()
