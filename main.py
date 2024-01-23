@@ -46,7 +46,7 @@ with app.app_context():
 api.add_resource(UserRegistrationResource, '/register')
 api.add_resource(UserLoginResource, '/login')
 api.add_resource(RefreshTokenResource, '/refresh')
-api.add_resource(ProductResource, '/products', '/products/<int:product_id>')
+api.add_resource(ProductResource, '/products', '/products/<int:product_id>', '/public/products')
 api.add_resource(AdminProductResource, '/products/<int:product_id>')
 api.add_resource(UserResource, '/user')
 api.add_resource(OrderProductResource, '/order')
